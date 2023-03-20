@@ -67,3 +67,28 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
 #  3) text: contenido textual del tweet
   
   
+#--- Visualizar primera fila de la base de datos [db: raw_train]
+  
+  head(raw_train, 1)
+  
+#--- Visualizar última fila de la base de datos [db: raw_train]
+  
+  tail(raw_train, 1)
+  
+#--- Explorar el tipo de variable de la base de datos [db: raw_train]
+  
+  glimpse(raw_train)  
+  
+# Nota: Las tres varaibles incluidas en la db:raw_train son variables tipo "character"
+  
+#--- Preparando los datos 
+  
+#--- Renombrar varaibles
+  raw_train <- rename(raw_train, c("autor" = "name"))
+  raw_train <- rename(raw_train, c("tweet" = "text"))
+  raw_test <- rename(raw_test, c("tweet" = "text"))
+  
+  # Antes de vectorizar vamos a limpiar y homogenizar el texto que aparece en 
+  # la variable tweet.
+  
+  
