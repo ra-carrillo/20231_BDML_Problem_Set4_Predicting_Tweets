@@ -118,5 +118,30 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
     mutate(tweet = gsub('"', '', raw_train$tweet))
   
   raw_train["tweet"] <- apply(raw_train["tweet"], 1, stripWhitespace)     # eliminar múltiples espacios en blanco
+
+#---Se transforma el dataframe a nivel de palabras, previa creación de un id para cada tweet 
+  raw_train <- raw_train %>%
+    mutate(id2 = row_number())
   
+  words <- raw_train %>%
+    unnest_tokens(output = "word", input = "tweet")
+
+#---Se eliminan las stopwords
+  sw <- c()
+  for (s in c("snowball", "stopwords-iso", "nltk")) {
+    temp <- get_stopwords("spanish", source = s)$word
+    sw <- c(sw, temp)
+  }
+  sw <- unique(sw)
+  sw <- unique(stri_trans_general(str = sw, id = "Latin-ASCII"))
+  sw <- data.frame(word = sw)  
+  
+#--- Número de palabras antes de eliminar stopwords
+  nrow(words)      # 290298 palabras
+  
+  words <- words %>%
+    anti_join(sw, by = "word")
+  
+  ### Número de palabras después de eliminar stopwords
+  nrow(words)     # 139097 palabras
   
