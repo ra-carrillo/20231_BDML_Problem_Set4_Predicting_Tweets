@@ -90,5 +90,33 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
   
   # Antes de vectorizar vamos a limpiar y homogenizar el texto que aparece en 
   # la variable tweet.
+ 
+#--- Limpieza de texto
+  
+#--- Número de tweets por autor
+  
+  table(raw_train$autor) / length(raw_train$autor) # proporción similar para cada autor
+  
+#--- Limpieza de la variable tweet 
+  
+  raw_train["tweet"] <- apply(raw_train["tweet"], 1, tolower)             # tweet en minúscula 
+  raw_train["tweet"] <- apply(raw_train["tweet"], 1, removeNumbers)       # eliminar números
+  raw_train["tweet"] <- apply(raw_train["tweet"], 1, removePunctuation)   # eliminar puntuación
+  raw_train["tweet"] <- apply(raw_train["tweet"], 1, function(x)          # eliminar acentos
+  stri_trans_general(str = x, id = "Latin-ASCII"))
+  
+  raw_train <- raw_train %>% 
+    mutate(tweet = gsub('@|#', '', raw_train$tweet))
+  
+  raw_train <- raw_train %>% 
+    mutate(tweet = gsub('!|¡', '', raw_train$tweet))
+  
+  raw_train <- raw_train %>% 
+    mutate(tweet = gsub('¿|?', '', raw_train$tweet))
+  
+  raw_train <- raw_train %>% 
+    mutate(tweet = gsub('"', '', raw_train$tweet))
+  
+  raw_train["tweet"] <- apply(raw_train["tweet"], 1, stripWhitespace)     # eliminar múltiples espacios en blanco
   
   
