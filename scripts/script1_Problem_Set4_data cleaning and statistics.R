@@ -145,3 +145,48 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
   ### Número de palabras después de eliminar stopwords
   nrow(words)     # 139097 palabras
   
+
+#---- Análisis descriptivo
+  
+#---Exploración de la base
+  
+  # Número de palabras utilizadas por cada autor
+  words %>% group_by(autor) %>% summarise(n = n()) 
+  
+  words %>%  ggplot(aes(x = autor)) + geom_bar() + coord_flip() + 
+    labs(x = "Autor", y = "Número de palabras") + 
+    theme_bw() 
+  
+  
+#--- Longitud media de los tweets por autor
+  
+  words %>% group_by(autor, id2) %>% summarise(longitud = n()) %>%                       
+    group_by(autor) %>% summarise(media_longitud = mean(longitud),
+                                 sd_longitud = sd(longitud))
+  
+  words %>% group_by(autor, id2) %>% summarise(longitud = n()) %>%                      
+    group_by(autor) %>%
+    summarise(media_longitud = mean(longitud),
+              sd_longitud = sd(longitud)) %>%
+    ggplot(aes(x = autor, y = media_longitud)) +
+    geom_col() +
+    geom_errorbar(aes(ymin = media_longitud - sd_longitud,
+                      ymax = media_longitud + sd_longitud)) +
+    labs(x = "Autor", y = "Longitud media/Tweet") + 
+    coord_flip() + theme_bw() 
+  
+  # Los tweets de Uribe y Petro son similares en longitud media y desviación, mostrando ésta última que suelen alternar entre tweets largos y cortos. 
+  # Los tweets de López son más extensos y con menor desviación.   
+  
+  ### Gráfica de las frecuencia de palabras por autor
+  words %>% group_by(autor, word) %>% count(word) %>% group_by(autor) %>%
+    top_n(10, n) %>% arrange(autor, desc(n)) %>%
+    ggplot(aes(x = reorder(word,n), y = n, fill = autor)) +
+    geom_col() +
+    theme_bw() +
+    labs(y = "", x = "") +
+    theme(legend.position = "none") +
+    coord_flip() +
+    facet_wrap(~autor,scales = "free", ncol = 1, drop = TRUE)
+  
+  
