@@ -189,4 +189,70 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
     coord_flip() +
     facet_wrap(~autor,scales = "free", ncol = 1, drop = TRUE)
   
+  #----- Lematización y matriz TF-IDF
+  
+  ### Lematización
+  
+  model <- udpipe_load_model(file = "spanish-gsd-ud-2.5-191206.udpipe")
+  palabras_unicas <- words %>%
+    distinct(word)
+  udpipe_results <- udpipe_annotate(model, x = palabras_unicas$word)
+  udpipe_results <- as_tibble(udpipe_results)
+  udpipe_results <- udpipe_results %>% 
+    select(token, lemma) %>%
+    rename("word" = "token")
+  words <- words %>%
+    left_join(udpipe_results, by = "word", multiple = "all")
+  words[is.na(words$lemma), "lemma"] <- words[is.na(words$lemma), "word"]
+  
+  ### Palabras menos comunes
+  words %>%
+    count(lemma) %>%
+    arrange(desc(n)) %>%
+    tail(100)
+  ### Palabras más comunes
+  words %>%
+    count(lemma) %>%
+    arrange(desc(n)) %>%
+    head()
+  ### Validación de palabras únicas
+  length(unique(words$lemma))  # 17662
+  
+  ### Para reducir el tamaño de la matriz TF-IDF se eliminan todas las palabras que estén menos de 10 veces
+  palabras_eliminar <- words %>%
+    count(lemma) %>%
+    filter(n < 10)
+  
+  words <- words %>%
+    anti_join(palabras_eliminar, by = "lemma") 
+  
+  ### Se ajusta el texto para volver al formato original (Tweet por fila)
+  data_clean <- words %>%
+    group_by(id2,name,id) %>% 
+    summarise(comentario = str_c(lemma, collapse = " ")) %>%
+    ungroup()
+  
+  setdiff(train$id, data_clean$id)
+  train[c(9287, 9349),]
+  
+  ### Se crea un corpus
+  tm_corpus <- Corpus(VectorSource(x = data_clean$comentario))
+  str(tm_corpus) # 9287 comentarios
+  
+  ### Se crea la matriz TF-IDF
+  tf_idf <- TermDocumentMatrix(tm_corpus,
+                               control = list(weighting = weightTfIdf))
+  
+  tf_idf <- tf_idf %>%
+    as.matrix() %>%
+    t() %>%
+    as.data.frame()
+  
+  ### Validación del tamaño de la matriz
+  dim(tf_idf) # 9287 x 2517
+  
+  ### Se guarda la base final de train
+  save(tf_idf, 
+       file = "train_para_modelar.RData")
+  
   
