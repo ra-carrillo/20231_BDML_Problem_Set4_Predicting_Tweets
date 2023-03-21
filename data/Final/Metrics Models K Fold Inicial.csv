@@ -1,0 +1,33 @@
+﻿"wflow_id",".config",".metric","mean","std_err","n","preprocessor","model","rank"
+"Referencia_Random Forest","Preprocessor1_Model1","accuracy",0.7131847270920024,0.006160554715514416,10,"recipe","rand_forest",1
+"Referencia_Random Forest","Preprocessor1_Model1","roc_auc",0.8724275290463918,0.003971737803672386,10,"recipe","rand_forest",1
+"Referencia_Random Forest","Preprocessor1_Model1","sensitivity",0.7054360760221492,0.0062700090119038,10,"recipe","rand_forest",1
+"Referencia_Random Forest","Preprocessor1_Model1","specificity",0.8573474701648289,0.003117001804069858,10,"recipe","rand_forest",1
+"Inicial_Random Forest","Preprocessor1_Model1","accuracy",0.7096206320756963,0.006811878153515076,10,"recipe","rand_forest",2
+"Inicial_Random Forest","Preprocessor1_Model1","roc_auc",0.8706220270836353,0.0035733540554122446,10,"recipe","rand_forest",2
+"Inicial_Random Forest","Preprocessor1_Model1","sensitivity",0.701416806603655,0.00698099343968551,10,"recipe","rand_forest",2
+"Inicial_Random Forest","Preprocessor1_Model1","specificity",0.8556804726815689,0.003377643888902492,10,"recipe","rand_forest",2
+"SMOTE - Normalizado_Random Forest","Preprocessor1_Model1","accuracy",0.7084741101873769,0.005923035383160419,10,"recipe","rand_forest",3
+"SMOTE - Normalizado_Random Forest","Preprocessor1_Model1","roc_auc",0.8718438536385182,0.004122385343550822,10,"recipe","rand_forest",3
+"SMOTE - Normalizado_Random Forest","Preprocessor1_Model1","sensitivity",0.7016275383808128,0.006010156049152647,10,"recipe","rand_forest",3
+"SMOTE - Normalizado_Random Forest","Preprocessor1_Model1","specificity",0.8552891371749671,0.0029866023492492017,10,"recipe","rand_forest",3
+"Referencia_Elastic Multinomial","Preprocessor1_Model1","accuracy",0.7027698026599596,0.006547496618656856,10,"recipe","multinom_reg",4
+"Referencia_Elastic Multinomial","Preprocessor1_Model1","roc_auc",0.8629587913715296,0.004008840418353105,10,"recipe","multinom_reg",4
+"Referencia_Elastic Multinomial","Preprocessor1_Model1","sensitivity",0.6945381645293434,0.006731734622461878,10,"recipe","multinom_reg",4
+"Referencia_Elastic Multinomial","Preprocessor1_Model1","specificity",0.8520472246869149,0.0033614278024645186,10,"recipe","multinom_reg",4
+"Rec 2 con PCA_Random Forest","Preprocessor1_Model1","accuracy",0.7020585732226245,0.006793776293629717,10,"recipe","rand_forest",5
+"Rec 2 con PCA_Random Forest","Preprocessor1_Model1","roc_auc",0.8642992074769675,0.004447357668502208,10,"recipe","rand_forest",5
+"Rec 2 con PCA_Random Forest","Preprocessor1_Model1","sensitivity",0.6947911355724774,0.006838973622051676,10,"recipe","rand_forest",5
+"Rec 2 con PCA_Random Forest","Preprocessor1_Model1","specificity",0.8522347070990323,0.00336187798855576,10,"recipe","rand_forest",5
+"SMOTE - Normalizado_Elastic Multinomial","Preprocessor1_Model1","accuracy",0.7004863289085829,0.007204749250092203,10,"recipe","multinom_reg",6
+"SMOTE - Normalizado_Elastic Multinomial","Preprocessor1_Model1","roc_auc",0.8630352892790539,0.003956032307884198,10,"recipe","multinom_reg",6
+"SMOTE - Normalizado_Elastic Multinomial","Preprocessor1_Model1","sensitivity",0.693833637577289,0.007292519102497332,10,"recipe","multinom_reg",6
+"SMOTE - Normalizado_Elastic Multinomial","Preprocessor1_Model1","specificity",0.8514400580231315,0.003660404926545585,10,"recipe","multinom_reg",6
+"Rec 2 con PCA_Elastic Multinomial","Preprocessor1_Model1","accuracy",0.6996300006328537,0.006608796840472982,10,"recipe","multinom_reg",7
+"Rec 2 con PCA_Elastic Multinomial","Preprocessor1_Model1","roc_auc",0.8632922726583475,0.004048257831890285,10,"recipe","multinom_reg",7
+"Rec 2 con PCA_Elastic Multinomial","Preprocessor1_Model1","sensitivity",0.6929412093297418,0.006673444153935342,10,"recipe","multinom_reg",7
+"Rec 2 con PCA_Elastic Multinomial","Preprocessor1_Model1","specificity",0.8510316333200088,0.003371128761410621,10,"recipe","multinom_reg",7
+"Inicial_Elastic Multinomial","Preprocessor1_Model1","accuracy",0.6986322417477909,0.00686411881748129,10,"recipe","multinom_reg",8
+"Inicial_Elastic Multinomial","Preprocessor1_Model1","roc_auc",0.8621371965916469,0.003978758966194183,10,"recipe","multinom_reg",8
+"Inicial_Elastic Multinomial","Preprocessor1_Model1","sensitivity",0.6899835365561107,0.007003041460795134,10,"recipe","multinom_reg",8
+"Inicial_Elastic Multinomial","Preprocessor1_Model1","specificity",0.8499021181714305,0.003497412286129719,10,"recipe","multinom_reg",8
