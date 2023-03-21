@@ -1,0 +1,5 @@
+﻿"wflow_id",".config",".metric","mean","std_err","n","preprocessor","model","rank"
+"recipe_Multinomial","Preprocessor1_Model1","accuracy",0.7826024446051475,0.0032970813157879486,10,"recipe","multinom_reg",1
+"recipe_Multinomial","Preprocessor1_Model1","roc_auc",0.9091385886831953,0.002713426816629704,10,"recipe","multinom_reg",1
+"recipe_Multinomial","Preprocessor1_Model1","sensitivity",0.7776859982939801,0.003267144002802284,10,"recipe","multinom_reg",1
+"recipe_Multinomial","Preprocessor1_Model1","specificity",0.891718479312782,0.001650962568175634,10,"recipe","multinom_reg",1
