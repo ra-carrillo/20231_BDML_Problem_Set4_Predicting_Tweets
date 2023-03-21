@@ -1,0 +1,37 @@
+﻿"wflow_id",".config",".metric","mean","std_err","n","preprocessor","model","rank"
+"PCA Tokens3_Elastic Multinom","Preprocessor1_Model1","accuracy",0.8289078170205132,0.0038234275964802657,10,"recipe","multinom_reg",1
+"PCA Tokens3_Elastic Multinom","Preprocessor1_Model1","roc_auc",0.9439665126640541,0.0018146858209418663,10,"recipe","multinom_reg",1
+"PCA Tokens3_Elastic Multinom","Preprocessor1_Model1","sensitivity",0.8248702321468961,0.003820068489111832,10,"recipe","multinom_reg",1
+"PCA Tokens3_Elastic Multinom","Preprocessor1_Model1","specificity",0.915156180316968,0.001916936901345423,10,"recipe","multinom_reg",1
+"PCA New Vars_Elastic Multinom","Preprocessor1_Model1","accuracy",0.8199198377572129,0.006077710665091072,10,"recipe","multinom_reg",2
+"PCA New Vars_Elastic Multinom","Preprocessor1_Model1","roc_auc",0.9375637715068237,0.0017549611474548049,10,"recipe","multinom_reg",2
+"PCA New Vars_Elastic Multinom","Preprocessor1_Model1","sensitivity",0.8153865200507808,0.006220961214951602,10,"recipe","multinom_reg",2
+"PCA New Vars_Elastic Multinom","Preprocessor1_Model1","specificity",0.910655120063407,0.0030368720082107593,10,"recipe","multinom_reg",2
+"PCA_Elastic Multinom","Preprocessor1_Model1","accuracy",0.8197761677747413,0.006253887605250374,10,"recipe","multinom_reg",3
+"PCA_Elastic Multinom","Preprocessor1_Model1","roc_auc",0.9382161346226405,0.0017143881444758756,10,"recipe","multinom_reg",3
+"PCA_Elastic Multinom","Preprocessor1_Model1","sensitivity",0.8155090545895143,0.006379216943613207,10,"recipe","multinom_reg",3
+"PCA_Elastic Multinom","Preprocessor1_Model1","specificity",0.9105773445120041,0.00310933312512063,10,"recipe","multinom_reg",3
+"PCA Tokens3_Lasso Multinom","Preprocessor1_Model1","accuracy",0.8154977870441493,0.004897066962555863,10,"recipe","multinom_reg",4
+"PCA Tokens3_Lasso Multinom","Preprocessor1_Model1","roc_auc",0.937990121169989,0.002436070800588187,10,"recipe","multinom_reg",4
+"PCA Tokens3_Lasso Multinom","Preprocessor1_Model1","sensitivity",0.8109818131416634,0.004993163615812937,10,"recipe","multinom_reg",4
+"PCA Tokens3_Lasso Multinom","Preprocessor1_Model1","specificity",0.9084577861155365,0.002475395709013035,10,"recipe","multinom_reg",4
+"PCA_Lasso Multinom","Preprocessor1_Model1","accuracy",0.8076481797908331,0.0053519611070208355,10,"recipe","multinom_reg",5
+"PCA_Lasso Multinom","Preprocessor1_Model1","roc_auc",0.9328140811811384,0.0021324220844322794,10,"recipe","multinom_reg",5
+"PCA_Lasso Multinom","Preprocessor1_Model1","sensitivity",0.8027914771329634,0.005371669549656672,10,"recipe","multinom_reg",5
+"PCA_Lasso Multinom","Preprocessor1_Model1","specificity",0.904614145673209,0.0026873018138609335,10,"recipe","multinom_reg",5
+"PCA New Vars_Lasso Multinom","Preprocessor1_Model1","accuracy",0.8050793993347488,0.005626771607062732,10,"recipe","multinom_reg",6
+"PCA New Vars_Lasso Multinom","Preprocessor1_Model1","roc_auc",0.9325433856799211,0.002136732320800182,10,"recipe","multinom_reg",6
+"PCA New Vars_Lasso Multinom","Preprocessor1_Model1","sensitivity",0.8002500493111292,0.005619333121017981,10,"recipe","multinom_reg",6
+"PCA New Vars_Lasso Multinom","Preprocessor1_Model1","specificity",0.9033814178020342,0.0028155698048485203,10,"recipe","multinom_reg",6
+"PCA Tokens3_Random Forest","Preprocessor1_Model1","accuracy",0.7638444166917776,0.005413273941430039,10,"recipe","rand_forest",7
+"PCA Tokens3_Random Forest","Preprocessor1_Model1","roc_auc",0.9069382509507464,0.0029108181152887077,10,"recipe","rand_forest",7
+"PCA Tokens3_Random Forest","Preprocessor1_Model1","sensitivity",0.757050662520724,0.005489744536166861,10,"recipe","rand_forest",7
+"PCA Tokens3_Random Forest","Preprocessor1_Model1","specificity",0.8828286330015189,0.002765272784472721,10,"recipe","rand_forest",7
+"PCA_Random Forest","Preprocessor1_Model1","accuracy",0.7632719645230345,0.005127640178277749,10,"recipe","rand_forest",8
+"PCA_Random Forest","Preprocessor1_Model1","roc_auc",0.9053674565363964,0.0032156582124665115,10,"recipe","rand_forest",8
+"PCA_Random Forest","Preprocessor1_Model1","sensitivity",0.7565328781478207,0.0051967236647078845,10,"recipe","rand_forest",8
+"PCA_Random Forest","Preprocessor1_Model1","specificity",0.8826289113053889,0.002667508683829794,10,"recipe","rand_forest",8
+"PCA New Vars_Random Forest","Preprocessor1_Model1","accuracy",0.7569925625175269,0.004616583382277929,10,"recipe","rand_forest",9
+"PCA New Vars_Random Forest","Preprocessor1_Model1","roc_auc",0.9032766789677943,0.0031520904477453328,10,"recipe","rand_forest",9
+"PCA New Vars_Random Forest","Preprocessor1_Model1","sensitivity",0.7503499734595698,0.0047090100556331565,10,"recipe","rand_forest",9
+"PCA New Vars_Random Forest","Preprocessor1_Model1","specificity",0.8795347426373652,0.002388301194042962,10,"recipe","rand_forest",9
