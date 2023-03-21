@@ -32,7 +32,7 @@ rm(list=ls())
 require("pacman")
 p_load(tm, # procesar,limpiar y analizar datos de texto
        tidyverse,stringi, tidytext, stopwords, wordcloud2, udpipe,
-       ggcorrplot)
+       ggcorrplot, janitor)
 
 #--- Establecer el directorio de la carpeta de datos
 
@@ -192,7 +192,7 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
   #----- Lematización y matriz TF-IDF
   
   ### Lematización
-  
+  m<-udpipe_download_model(language = "spanish")
   model <- udpipe_load_model(file = "spanish-gsd-ud-2.5-191206.udpipe")
   palabras_unicas <- words %>%
     distinct(word)
@@ -205,20 +205,23 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
     left_join(udpipe_results, by = "word", multiple = "all")
   words[is.na(words$lemma), "lemma"] <- words[is.na(words$lemma), "word"]
   
-  ### Palabras menos comunes
+  #--- Palabras menos comunes
   words %>%
     count(lemma) %>%
     arrange(desc(n)) %>%
     tail(100)
-  ### Palabras más comunes
+  
+  #--- Palabras más comunes
   words %>%
     count(lemma) %>%
     arrange(desc(n)) %>%
     head()
-  ### Validación de palabras únicas
+  
+  #--- Validación de palabras únicas
   length(unique(words$lemma))  # 17662
   
-  ### Para reducir el tamaño de la matriz TF-IDF se eliminan todas las palabras que estén menos de 10 veces
+  ### Para reducir el tamaño de la matriz TF-IDF
+  #se eliminan todas las palabras que estén menos de 10 veces
   palabras_eliminar <- words %>%
     count(lemma) %>%
     filter(n < 10)
@@ -228,12 +231,12 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
   
   ### Se ajusta el texto para volver al formato original (Tweet por fila)
   data_clean <- words %>%
-    group_by(id2,name,id) %>% 
+    group_by(id2,autor,id) %>% 
     summarise(comentario = str_c(lemma, collapse = " ")) %>%
     ungroup()
   
-  setdiff(train$id, data_clean$id)
-  train[c(9287, 9349),]
+  setdiff(raw_train$id, data_clean$id)
+  raw_train[c(9287, 9349),]
   
   ### Se crea un corpus
   tm_corpus <- Corpus(VectorSource(x = data_clean$comentario))
@@ -251,8 +254,13 @@ setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predi
   ### Validación del tamaño de la matriz
   dim(tf_idf) # 9287 x 2517
   
+  
+  #--- Establecer el directorio de la carpeta de datos
+  
+  setwd("C:/Users/andre/OneDrive/Github/Repositorios/20231_BDML_Problem_Set4_Predicting_Tweets/data/work")
+  
   ### Se guarda la base final de train
   save(tf_idf, 
-       file = "train_para_modelar.RData")
+       file = "train_model.RData")
   
   
