@@ -1,0 +1,25 @@
+﻿"wflow_id",".config",".metric","mean","std_err","n","preprocessor","model","rank"
+"Smote_Xgboost","Preprocessor1_Model1","accuracy",0.8178313686206171,0.003968000071077329,10,"recipe","boost_tree",1
+"Smote_Xgboost","Preprocessor1_Model1","roc_auc",0.9388339609606248,0.0013917857572716792,10,"recipe","boost_tree",1
+"Smote_Xgboost","Preprocessor1_Model1","sensitivity",0.8131311849276155,0.003969359206850479,10,"recipe","boost_tree",1
+"Smote_Xgboost","Preprocessor1_Model1","specificity",0.909548910333207,0.0019791831981223087,10,"recipe","boost_tree",1
+"Original_Xgboost","Preprocessor1_Model1","accuracy",0.8136956354462924,0.0034710168239522696,10,"recipe","boost_tree",2
+"Original_Xgboost","Preprocessor1_Model1","roc_auc",0.9378767201438312,0.0014996643855072324,10,"recipe","boost_tree",2
+"Original_Xgboost","Preprocessor1_Model1","sensitivity",0.8086807807327118,0.003659687327521193,10,"recipe","boost_tree",2
+"Original_Xgboost","Preprocessor1_Model1","specificity",0.9075015249787284,0.0017175022721213512,10,"recipe","boost_tree",2
+"Original_Multinomial Elastic","Preprocessor1_Model1","accuracy",0.8119785036222457,0.0034340625492391324,10,"recipe","multinom_reg",3
+"Original_Multinomial Elastic","Preprocessor1_Model1","roc_auc",0.9344318689992385,0.0015400906445064712,10,"recipe","multinom_reg",3
+"Original_Multinomial Elastic","Preprocessor1_Model1","sensitivity",0.8070877789994442,0.0036345478701155184,10,"recipe","multinom_reg",3
+"Original_Multinomial Elastic","Preprocessor1_Model1","specificity",0.9064407289952954,0.0017483833327719444,10,"recipe","multinom_reg",3
+"Smote_Multinomial Elastic","Preprocessor1_Model1","accuracy",0.8114101290053689,0.0030352602545725203,10,"recipe","multinom_reg",4
+"Smote_Multinomial Elastic","Preprocessor1_Model1","roc_auc",0.9343357815380542,0.0013291590265948124,10,"recipe","multinom_reg",4
+"Smote_Multinomial Elastic","Preprocessor1_Model1","sensitivity",0.8070404654469182,0.003144692360430276,10,"recipe","multinom_reg",4
+"Smote_Multinomial Elastic","Preprocessor1_Model1","specificity",0.906381630487449,0.0014982610176964054,10,"recipe","multinom_reg",4
+"Smote_Random Forest","Preprocessor1_Model1","accuracy",0.7853043060684025,0.003741053804743995,10,"recipe","rand_forest",5
+"Smote_Random Forest","Preprocessor1_Model1","roc_auc",0.9228080102977269,0.001747992612115072,10,"recipe","rand_forest",5
+"Smote_Random Forest","Preprocessor1_Model1","sensitivity",0.7790530436853506,0.0037195013851771697,10,"recipe","rand_forest",5
+"Smote_Random Forest","Preprocessor1_Model1","specificity",0.8930655626519475,0.0018770597769585573,10,"recipe","rand_forest",5
+"Original_Random Forest","Preprocessor1_Model1","accuracy",0.7820242897958192,0.004353090925250751,10,"recipe","rand_forest",6
+"Original_Random Forest","Preprocessor1_Model1","roc_auc",0.9207575469237161,0.0014371803609754446,10,"recipe","rand_forest",6
+"Original_Random Forest","Preprocessor1_Model1","sensitivity",0.775280247152158,0.004240794644298548,10,"recipe","rand_forest",6
+"Original_Random Forest","Preprocessor1_Model1","specificity",0.8913448889507365,0.002192957215597646,10,"recipe","rand_forest",6
