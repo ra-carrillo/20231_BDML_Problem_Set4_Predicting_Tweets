@@ -1,0 +1,17 @@
+﻿"wflow_id",".config",".metric","mean","std_err","n","preprocessor","model","rank"
+"recipe_1_Multinomial","Preprocessor1_Model1","accuracy",0.762915846562742,0.005037770458036729,10,"recipe","multinom_reg",1
+"recipe_1_Multinomial","Preprocessor1_Model1","roc_auc",0.8961629652693833,0.0029634551942306748,10,"recipe","multinom_reg",1
+"recipe_1_Multinomial","Preprocessor1_Model1","sensitivity",0.7579386230252911,0.005155392915942578,10,"recipe","multinom_reg",1
+"recipe_1_Multinomial","Preprocessor1_Model1","specificity",0.8817754483696574,0.0025600799358564577,10,"recipe","multinom_reg",1
+"recipe_2_Random Forest","Preprocessor1_Model1","accuracy",0.7556323780293297,0.004607124849443558,10,"recipe","rand_forest",2
+"recipe_2_Random Forest","Preprocessor1_Model1","roc_auc",0.8999734675515838,0.002222538022980162,10,"recipe","rand_forest",2
+"recipe_2_Random Forest","Preprocessor1_Model1","sensitivity",0.7503017887072551,0.004796912232235037,10,"recipe","rand_forest",2
+"recipe_2_Random Forest","Preprocessor1_Model1","specificity",0.8785505207986238,0.0023328298848070183,10,"recipe","rand_forest",2
+"recipe_1_Random Forest","Preprocessor1_Model1","accuracy",0.753208277814104,0.004475927667280306,10,"recipe","rand_forest",3
+"recipe_1_Random Forest","Preprocessor1_Model1","roc_auc",0.8996727110560194,0.002700633607523755,10,"recipe","rand_forest",3
+"recipe_1_Random Forest","Preprocessor1_Model1","sensitivity",0.7464354344332557,0.004591115373437595,10,"recipe","rand_forest",3
+"recipe_1_Random Forest","Preprocessor1_Model1","specificity",0.8768270628428174,0.0022409080035842655,10,"recipe","rand_forest",3
+"recipe_2_Multinomial","Preprocessor1_Model1","accuracy",0.7489396535209284,0.0054504279907496055,10,"recipe","multinom_reg",4
+"recipe_2_Multinomial","Preprocessor1_Model1","roc_auc",0.894586839306753,0.003151811089828958,10,"recipe","multinom_reg",4
+"recipe_2_Multinomial","Preprocessor1_Model1","sensitivity",0.7461126648253179,0.005592161277558737,10,"recipe","multinom_reg",4
+"recipe_2_Multinomial","Preprocessor1_Model1","specificity",0.8757697011457056,0.0027399798918169033,10,"recipe","multinom_reg",4
